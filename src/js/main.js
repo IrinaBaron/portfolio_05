@@ -1,35 +1,55 @@
+let jsTriggers = document.querySelectorAll('.js-tab-trigger'),
+  jsContents = document.querySelectorAll('.js-tab-content');
+
+jsTriggers.forEach(function (trigger) { // 1
+  trigger.addEventListener('click', function () { // 2
+    // клик!
+    let id = this.getAttribute('data-tab'), // 1
+      content = document.querySelector('.js-tab-content[data-tab="' + id + '"]'), // 2
+      activeTrigger = document.querySelector('.js-tab-trigger.active'), // 3
+      activeContent = document.querySelector('.js-tab-content.active'); // 4
+
+    activeTrigger.classList.remove('active'); // 1
+    trigger.classList.add('active'); // 2
+
+    activeContent.classList.remove('active'); // 3
+    content.classList.add('active'); // 4
+  });
+});
+
+
 // burger-menu 
 
-const burgerBtn = document.querySelector('.header__burger')
+// const burgerBtn = document.querySelector('.header__burger')
 
-burgerBtn.addEventListener('click', function () {
-  burgerBtn.classList.toggle('active');
-  document.querySelector('.header__nav').classList.toggle('active');
-  document.querySelector('.contacts__phone').classList.toggle('active')
-  // document.querySelector('body').classList.toggle('lock');
-})
+// burgerBtn.addEventListener('click', function () {
+//   burgerBtn.classList.toggle('active');
+//   document.querySelector('.header__nav').classList.toggle('active');
+//   document.querySelector('.contacts__phone').classList.toggle('active')
+//   // document.querySelector('body').classList.toggle('lock');
+// })
 
-const searchBtn = document.querySelector('.search__btn');
+// const searchBtn = document.querySelector('.search__btn');
 
-searchBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  document.querySelector('.header__search').classList.toggle('active');
-  document.querySelector('body').classList.toggle('lock');
-})
+// searchBtn.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   document.querySelector('.header__search').classList.toggle('active');
+//   document.querySelector('body').classList.toggle('lock');
+// })
 
-const searchClose = document.querySelector('.search__span');
-searchClose.addEventListener('click', function () {
-  document.querySelector('.header__search').classList.remove('active')
-  document.querySelector('body').classList.toggle('lock');
-})
+// const searchClose = document.querySelector('.search__span');
+// searchClose.addEventListener('click', function () {
+//   document.querySelector('.header__search').classList.remove('active')
+//   document.querySelector('body').classList.toggle('lock');
+// })
 // about
 
 // form__map
-let closeInfo = document.querySelector('.contacts__close');
+// let closeInfo = document.querySelector('.contacts__close');
 
-closeInfo.addEventListener('click', function () {
-  document.querySelector('.contacts__info.active').classList.remove('active');
-})
+// closeInfo.addEventListener('click', function () {
+//   document.querySelector('.contacts__info.active').classList.remove('active');
+// })
 
 //form__input
 

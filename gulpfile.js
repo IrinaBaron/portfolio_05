@@ -90,6 +90,7 @@ const images = () => {
     'src/images/**/*.jpg',
     'src/images/**/*.jpeg',
     'src/images/**/*.png',
+    'src/images/**/*.webp',
     'src/images/**/*.svg',
   ])
     .pipe(image())
