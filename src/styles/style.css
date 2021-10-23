@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Asap';
+  src: url('../fonts/asap-bold-webfont.woff2') format('woff2'),
+       url('../fonts/asap-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Asap';
+  src: url('../fonts/asap-regular-webfont.woff2') format('woff2'),
+       url('../fonts/asap-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html {
+  font-family: 'Asap', sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-style: normal;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  display: none;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.container {
+  padding: 68px 20px 68px 20px;
+  margin: 0 auto;
+  max-width: 1290px;
+}
+
+/* header  */
+.header {
+  background-color: #202020;
+}
+
