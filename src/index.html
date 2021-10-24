@@ -47,7 +47,7 @@
           </li>
         </ul>
         <div class="header__top-email">
-          <a class="header__top-link" href="#">sales@medpro.com</a>
+          <a class="header__top-link" href="mailto:sales@medpro.com">sales@medpro.com</a>
         </div>
       </div>
     </div>
@@ -88,7 +88,8 @@
         </nav>
         <div class="header__bottom-wrap">
           <span class="header__bottom-span">Call Us</span>
-          <span class="header__bottom-phone">320- 111-2111 (MED-PRO)</span>
+          <a class="header__bottom-phone" href="tel:320-111-2111">320- 111-2111 (MED-PRO)</a>
+          <!-- <span></span> -->
         </div>
       </div>
     </div>
@@ -144,7 +145,7 @@
                 <h3 class="about__info-title">Dependable</h3>
                 <p class="about__info-text">Our skilled and trustworthy teams ensure process continuity and maintain
                   high standards of quality…</p>
-                <a class="about__info-link" href="#">READ MORE</a>
+                <a class="about__info-link link" href="#">READ MORE</a>
               </div>
             </li>
             <li class="about__item item2">
@@ -159,7 +160,7 @@
                 <h3 class="about__info-title">Open</h3>
                 <p class="about__info-text">You are assured of transparency and openness in our staffing, workflows and
                   communication protocol. </p>
-                <a class="about__info-link" href="#">READ MORE</a>
+                <a class="about__info-link link" href="#">READ MORE</a>
               </div>
             </li>
             <li class="about__item item3">
@@ -174,7 +175,7 @@
                 <h3 class="about__info-title">Connected</h3>
                 <p class="about__info-text">There is never a time when some one will not be in touch with you! Your
                   dedicated account manager…</p>
-                <a class="about__info-link" href="#">READ MORE</a>
+                <a class="about__info-link link" href="#">READ MORE</a>
               </div>
             </li>
           </ul>
@@ -184,8 +185,6 @@
     </section>
     <section class="benefits">
       <div class="benefits__left">
-        <!-- <div class="container benefits__container"> -->
-
         <ul class="benefits__left-list">
           <li class="benefits__left-tab js-tab-trigger active" data-tab="1">
             <span class="benefits__left-span">For Physicians and Group Practice:</span>
@@ -197,16 +196,13 @@
             <span class="benefits__left-span">You Stay in Control:</span>
           </li>
         </ul>
-
-
-        <!-- </div> -->
       </div>
       <div class="benefits__right">
         <ul class="benefits__right-list">
           <li class="benefits__right-item js-tab-content active" data-tab="1">
             <div class="benefits__right-wrap">
               <h2 class="benefits__right-title title">Benefits</h2>
-              <span class="benefits__right-subtitle">For Physicians and Group Practice</span>
+              <h3 class="benefits__right-subtitle subtitle">For Physicians and Group Practice</h3>
               <ul class="benefits__right-list2">
                 <li class="benefits__right-item2">
                   90% first pass payment within 30 days, at 3% Billing charges.
@@ -228,7 +224,7 @@
           <li class="benefits__right-item js-tab-content" data-tab="2">
             <div class="benefits__right-wrap">
               <h2 class="benefits__right-title title">Benefits</h2>
-              <span class="benefits__right-subtitle">For Physicians and Group Practice</span>
+              <h3 class="benefits__right-subtitle subtitle">For Physicians and Group Practice</h3>
               <ul class="benefits__right-list2">
                 <li class="benefits__right-item2">
                   Increase in revenue by 15%
@@ -246,7 +242,7 @@
           <li class="benefits__right-item js-tab-content" data-tab="3">
             <div class="benefits__right-wrap">
               <h2 class="benefits__right-title title">Benefits</h2>
-              <span class="benefits__right-subtitle">For Physicians and Group Practice</span>
+              <h3 class="benefits__right-subtitle subtitle">For Physicians and Group Practice</h3>
               <ul class="benefits__right-list2">
                 <li class="benefits__right-item2">
                   90% first pass payment within 30 days, at 3% Billing charges.
@@ -270,17 +266,153 @@
     </section>
     <section class="services">
       <div class="container services__container">
-
+        <div class="services__left">
+          <h2 class="services__left-title title">Our Services</h2>
+          <h3 class="services__left-subtitle subtitle">Our staff extension services include</h3>
+          <ul class="services__left-accordion accordion" id="accordion">
+            <li class="accordion__item show">
+              <div class="accordion__icon">
+                <span class="accordion__icon-span icon-span1"></span>
+                <span class="accordion__icon-span icon-span2"></span>
+              </div>
+              <div class="accordion__item-header">
+                Coding Services
+              </div>
+              <div class="accordion__item-content content">
+                <div class="content__wrap">
+                  <img class="content__img" src="./images/coding-services.webp" alt="photo">
+                <div class="content__info">
+                  <p class="content__info-text">
+                    We offer high quality coding and auditing services to hospitals and physicians; services extended for Anesthesia, Radiology, E&M and Surgery coding.
+                  </p>
+                  <a class="content__info-link link" href="#">READ MORE</a>
+                </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__icon">
+                <span class="accordion__icon-span icon-span1"></span>
+                <span class="accordion__icon-span icon-span2"></span>
+              </div>
+              <div class="accordion__item-header">
+                Credentialing
+              </div>
+              <div class="accordion__item-content content">
+                <div class="content__wrap">
+                  <img class="content__img" src="./images/coding-services.webp" alt="photo">
+                <div class="content__info">
+                  <p class="content__info-text">
+                    We offer high quality coding and auditing services to hospitals and physicians; services extended for Anesthesia, Radiology, E&M and Surgery coding.
+                  </p>
+                  <a class="content__info-link link" href="#">READ MORE</a>
+                </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__icon">
+                <span class="accordion__icon-span icon-span1"></span>
+                <span class="accordion__icon-span icon-span2"></span>
+              </div>
+              <div class="accordion__item-header">
+                HCC Maangement Services
+              </div>
+              <div class="accordion__item-content content">
+                <div class="content__wrap">
+                  <img class="content__img" src="./images/coding-services.webp" alt="photo">
+                <div class="content__info">
+                  <p class="content__info-text">
+                    We offer high quality coding and auditing services to hospitals and physicians; services extended for Anesthesia, Radiology, E&M and Surgery coding.
+                  </p>
+                  <a class="content__info-link link" href="#">READ MORE</a>
+                </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="services__right">
+          <h2 class="services__right-title title">Security</h2>
+          <h3 class="services__right-subtitle subtitle">POLI Compliance</h3>
+          <div class="services__right-wrap">
+            <img class="services__right-img" src="./images/services.webp" alt="photo">
+            <p class="services__right-text">
+              We work with you to develop customized risk-management solutions covering information security, business continuity and privacy regulations.
+            </p>
+            <button class="services__right-btn btn">READ MORE</button>
+          </div>
+        </div>
       </div>
     </section>
     <section class="testimonials">
-      <div class="container testimonials">
-
+      <div class="container testimonials__container">
+        <div class="testimonials__left">
+          <h2 class="testimonials__title title">Testimonials</h2>
+          <span class="testimonials__span">What people say?</span>
+          <span class="testimonials__percent">90%</span>
+          <span class="testimonials__info">First pass payment</span>
+          <div class="testimonials__left-wrap">
+            <a class="testimonials__left-link" href="#">Next</a>
+            <span class="testimonials__left-span">&#160;/&#160;</span>
+            <a class="testimonials__left-link" href="#">Prev</a>
+          </div>
+        </div>
+        <div class="testimonials__right">
+          <h3 class="testimonials__right-title">Increased revenues</h3>
+          <p class="testimonials__right-text">
+            When most people think of laser eye surgery, they automatically think of LASIK. While it is true that LASIK is a type of laser eye surgery, there are a number of other laser procedures that can produce equally successful results 
+          </p>
+          <span class="testimonials__right-span">Sam Andrews</span>
+        </div>
       </div>
     </section>
     <section class="promise">
-      <div class="container promise__comtainer">
-
+      <div class="container promise__container">
+        <ul class="promise__left">
+          <li class="promise__left-item">
+            <h2 class="promise__left-title title">For Physicians</h2>
+            <h3 class="promise__left-subtitle subtitle">Our Promise</h3>
+            <ul class="promise__left-wrap">
+              <li class="promise__left-text">
+                90% First Pass payment within 30 days 
+              </li>
+              <li class="promise__left-text">
+                @up to 3% of collected revenue.
+              </li>
+              <li class="promise__left-text">
+                Free Credentialing and Re-credentialing
+              </li>
+            </ul>
+            <a class="promise__left-link link" href="#">READ MORE</a>
+          </li>
+          <li class="promise__left-item">
+            <h2 class="promise__left-title title">For Hospitals/Medical Billing Companies </h2>
+            <h3 class="promise__left-subtitle subtitle">Our Promise</h3>
+            <ul class="promise__left-wrap">
+              <li class="promise__left-text">
+                Increase in revenue by 15%
+              </li>
+              <li class="promise__left-text">
+                Decrease in costs by 40%
+              </li>
+              <li class="promise__left-text">
+                Accelerated cash flows with effective management of denials
+              </li>
+            </ul>
+            <a class="promise__left-link link" href="#">READ MORE</a>
+          </li>
+        </ul>
+        <div class="promise__right">
+          <h2 class="promise__right-title title">Appointment Form</h2>
+          <form class="promise__form form">
+            <input class="form__input name" type="text" placeholder="First Name*">
+            <input class="form__input surname" type="text" placeholder="Last Name*">
+            <input class="form__input email" type="email" placeholder="Email Address*">
+            <input class="form__input company" type="text" placeholder="Company">
+            <input class="form__btn btn" type="submit" value="SEND">
+          </form>
+        </div>
       </div>
     </section>
   </main>
