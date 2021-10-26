@@ -1,3 +1,17 @@
+// burger-menu 
+
+const burgerBtn = document.querySelector('.burger');
+let bodyClass = document.querySelector('.body');
+
+burgerBtn.addEventListener('click', function () {
+  burgerBtn.classList.toggle('active');
+  document.querySelector('.nav').classList.toggle('active');
+  // document.querySelector('.contacts__phone').classList.toggle('active');
+  bodyClass.classList.toggle('lock');
+})
+
+// tabs
+
 let jsTriggers = document.querySelectorAll('.js-tab-trigger'),
   jsContents = document.querySelectorAll('.js-tab-content');
 
@@ -73,16 +87,8 @@ let accordion = (function (element) {
 
 let accordion1 = accordion();
 accordion1.init('#accordion');
-// burger-menu 
 
-// const burgerBtn = document.querySelector('.header__burger')
 
-// burgerBtn.addEventListener('click', function () {
-//   burgerBtn.classList.toggle('active');
-//   document.querySelector('.header__nav').classList.toggle('active');
-//   document.querySelector('.contacts__phone').classList.toggle('active')
-//   // document.querySelector('body').classList.toggle('lock');
-// })
 
 // const searchBtn = document.querySelector('.search__btn');
 
@@ -99,12 +105,7 @@ accordion1.init('#accordion');
 // })
 // about
 
-// form__map
-// let closeInfo = document.querySelector('.contacts__close');
 
-// closeInfo.addEventListener('click', function () {
-//   document.querySelector('.contacts__info.active').classList.remove('active');
-// })
 
 //form__input
 
@@ -131,28 +132,9 @@ btn.addEventListener('click', function (e) {
   e.preventDefault();
   let validName = validateName();
   let validEmail = validateEmail();
-  // if(!validName && !validEmail) {
-  //   return
-  // }
+  
 })
 
-// aboutBtn.addEventListener('click', function (e) {
-//   e.preventDefault();
-
-//   div2.classList.add('validate');
-//   document.querySelector('.about__form').append(div2);
-//   if (aboutInput.value == '') {
-//     div2.innerHTML = 'Введите email';
-//     aboutInput.style.borderColor = '#F06666';
-//   } else if (aboutInput.value.match(mailformat)) {
-//     div2.innerHTML = '';
-//     aboutInput.style.borderColor = 'transparent';
-//     // return true
-//   } else if (!aboutInput.value.match(mailformat)) {
-//     div2.innerHTML = 'Недопустимый формат';
-//     aboutInput.style.borderColor = '#F06666';
-//   }
-// })
 
 function validateName() {
   div.classList.add('validate');
