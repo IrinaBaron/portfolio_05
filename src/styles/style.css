@@ -734,3 +734,136 @@ h1 {
   line-height: 23px;
   color: var(--color-for-dark);
 }
+
+/* footer  */
+
+.footer {
+  position: relative;
+}
+
+.footer__container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer__top-list {
+  position: absolute;
+  top: -98px;
+  display: flex;
+}
+
+.footer__top-item {
+  padding: 40px 119px 90px 67px;
+}
+
+.one {
+  background-color: #5F5F5F;
+  background-image: url('../images/geo_teg.svg');
+  background-position: 16px center;
+  background-repeat: no-repeat;
+  background-size: 19px 27px;
+}
+
+.footer__top-subtitle {
+  margin-bottom: 11px;
+  color: var(--color-for-dark);
+}
+
+.footer__top-adress,
+.footer__top-phone,
+.footer__top-email
+ {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  color: var(--color-for-dark);
+}
+
+.two {
+  padding-right: 255px;
+  background-color: #6C6C6C;
+  background-image: url('../images/phone.svg');
+  background-position: 16px center;
+  background-repeat: no-repeat;
+  background-size: 23px;
+}
+
+.three {
+  background-color: #7B7B7B;
+  background-image: url('../images/email.svg');
+  background-position: 16px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.footer__wrap,
+.footer__top {
+  background-color: #4A4A4A;
+}
+
+.footer__wrap {
+  padding-top: 208px;
+  padding-bottom: 127px;
+}
+
+.footer__wrap-list {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.item-left {
+  margin-right: 117px;
+}
+
+.footer__wrap-subtitle {
+  margin-bottom: 45px;
+  color: var(--color-for-dark);
+}
+
+.footer__wrap-text {
+  max-width: 334px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  color: var(--color-for-dark);
+}
+
+.item-center {
+  margin-right: 176px;
+}
+
+.footer-nav__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  color: var(--color-for-dark);
+}
+
+.social {
+  display: flex;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 33px;
+}
+
+.social__link {
+  transition: opacity .4s ease-in-out;
+}
+
+.social__link:hover {
+  opacity: 0.7;
+}
+
+.footer__bottom {
+  padding-top: 42px;
+  padding-bottom: 26px;
+  background-color: #363636;
+}
+
+.footer__bottom-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  color: var(--color-for-dark);
+}
