@@ -406,9 +406,15 @@
         <div class="promise__right">
           <h2 class="promise__right-title title">Appointment Form</h2>
           <form class="promise__form form">
-            <input class="form__input name" type="text" placeholder="First Name*">
-            <input class="form__input surname" type="text" placeholder="Last Name*">
-            <input class="form__input email" type="email" placeholder="Email Address*">
+            <div class="form__wrap wrap-name">
+              <input class="form__input name" type="text" placeholder="First Name*">
+            </div>
+            <div class="form__wrap wrap-surname">
+              <input class="form__input surname" type="text" placeholder="Last Name*">
+            </div>
+            <div  class="form__wrap wrap-email">
+              <input class="form__input email" type="email" placeholder="Email Address*">
+            </div>
             <input class="form__input company" type="text" placeholder="Company">
             <input class="form__btn btn" type="submit" value="SEND">
           </form>
@@ -419,7 +425,26 @@
   <footer class="footer">
     <div class="footer__top">
       <div class="container footer__container">
-
+        <ul class="footer__top-list">
+          <li class="footer__top-item">
+            <div class="footer__top-info">
+              <h3 class="footer__top-subtitle subtitle"></h3>
+              <address class="footer__top-adress"></address>
+            </div>
+          </li>
+          <li class="footer__top-item">
+            <div class="footer__top-info">
+              <h3 class="footer__top-subtitle subtitle"></h3>
+              <a class="footer__top-phone" href="tel:444-599-3441">444-599-3441</a>
+            </div>
+          </li>
+          <li class="footer__top-item">
+            <div class="footer__top-info">
+              <h3 class="footer__top-subtitle subtitle"></h3>
+              <a class="footer__top-email" href="mailto:sales@medpro.com">sales@medpro.com</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="footer__wrap">
