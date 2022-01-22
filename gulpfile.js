@@ -26,7 +26,6 @@ const resources = () => {
 
 const styles = () => {
   return src(['src/styles/normalize.css','src/styles/style.css'])
-  // src(['src/styles/normalize.css','src/styles/**/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write())
     .pipe(scss({outputStyle: 'expanded'}).on('error', scss.logError))
@@ -102,10 +101,8 @@ const prebuild = function () {
   const ind = src('src/**/*.html')
     .pipe(dest('dist'))
   const resource = src('src/resources/**')
-  //   .pipe(dest('dist'))
+  
   const css = src(['src/styles/normalize.css','src/styles/**/style.css'])
-    //src(['src/styles/normalize.css','src/styles/**/*.scss'])
-    // .pipe(scss({outputStyle: 'expanded'}).on('error', scss.logError))
     .pipe(concat('main.css'))
     .pipe(autoprefixes({
       cascade: false
@@ -128,8 +125,6 @@ const buildM = function () {
     .pipe(dest('dist/images'))
   const fnt = src(['src/fonts/**/*.woff', 'src/fonts/**/*.woff2'])
     .pipe(dest('dist/fonts'))
-    // return src(['src/fonts/**/*.woff'])
-    // .pipe(dest('dist/fonts'))
 }
 
 const watchFiles = () => {
@@ -141,7 +136,6 @@ const watchFiles = () => {
 }
 
 watch('src/styles/**/*.css', styles)
-// watch('src/styles/**/*.scss', styles)
 watch('src/**/*.html', htmlMinify)
 watch('src/**/*.html', html)
 watch([
