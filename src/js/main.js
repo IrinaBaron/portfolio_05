@@ -29,7 +29,22 @@ jsTriggers.forEach(function (trigger) { // 1
     activeContent.classList.remove('active'); // 3
     content.classList.add('active'); // 4
   });
+  trigger.addEventListener('keyup', function (e) {
+    if (e.code == 'Enter') {
+      let id = this.getAttribute('data-tab'), // 1
+        content = document.querySelector('.js-tab-content[data-tab="' + id + '"]'), // 2
+        activeTrigger = document.querySelector('.js-tab-trigger.active'), // 3
+        activeContent = document.querySelector('.js-tab-content.active'); // 4
+
+      activeTrigger.classList.remove('active'); // 1
+      trigger.classList.add('active'); // 2
+
+      activeContent.classList.remove('active'); // 3
+      content.classList.add('active'); // 4
+    }
+  })
 });
+
 
 
 // accordion
@@ -46,34 +61,54 @@ let accordion = (function (element) {
     return element;
   };
   return function () {
+
     let _mainElement = {}, // .accordion
       _items = {}, // .accordion-item
       _contents = {}; // .accordion-item-content
     let _actionClick = function (e) {
-      if (!e.target.classList.contains('accordion__item-header')) { // прекращаем выполнение функции если кликнули не по заголовку
+      
+      
+      if (!e.target.classList.contains('accordion__item-header')) {
         return;
       }
-      e.preventDefault(); // отменям стандартное действие
-      // получаем необходимые данные
+      e.preventDefault();
+      console.log(e.target);
       let header = e.target,
         item = header.parentElement,
         itemActive = _getItem(_items, 'show');
-      if (itemActive === undefined) { // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+
+        if (e.code == 'Enter') {
+          console.log('ok')
+          if (itemActive === undefined) {
+            item.classList.add('show');
+          } else {
+            itemActive.classList.remove('show');
+  
+            if (itemActive !== item) {
+  
+              item.classList.add('show');
+            }
+          }
+        }
+
+      if (itemActive === undefined) {
         item.classList.add('show');
       } else {
-        // удаляем класс show у ткущего элемента
         itemActive.classList.remove('show');
-        // если следующая вкладка не равна активной
+
         if (itemActive !== item) {
-          // добавляем класс show к элементу (в зависимости от выбранного заголовка)
+
           item.classList.add('show');
         }
       }
+      
+
     },
-    _setupListeners = function () {
-      // добавим к элементу аккордиона обработчик события click
-      _mainElement.addEventListener('click', _actionClick);
-    };
+      _setupListeners = function () {
+
+        _mainElement.addEventListener('click', _actionClick);
+        _mainElement.addEventListener('keyup', _actionClick);
+      };
 
     return {
       init: function (element) {
@@ -132,7 +167,7 @@ btn.addEventListener('click', function (e) {
   e.preventDefault();
   let validName = validateName();
   let validEmail = validateEmail();
-  
+
 })
 
 
@@ -141,7 +176,7 @@ function validateName() {
   div2.classList.add('validate');
   nameDiv.append(div);
   surnameDiv.append(div2)
-  
+
   if (surnameInput.value == '') {
     div2.innerHTML = 'Enter your Last Name';
     surnameInput.style.borderColor = '#FF3030';
@@ -151,7 +186,7 @@ function validateName() {
   } else if (!surnameInput.value.match(simbol)) {
     div2.innerHTML = '';
     surnameInput.style.borderColor = 'transparent';
-    
+
   }
   if (nameInput.value == '') {
     div.innerHTML = 'Enter your First Name';
@@ -162,9 +197,9 @@ function validateName() {
   } else if (!nameInput.value.match(simbol)) {
     div.innerHTML = '';
     nameInput.style.borderColor = 'transparent';
-    
+
   }
-  
+
 }
 
 function validateEmail() {
